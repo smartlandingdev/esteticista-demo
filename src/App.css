@@ -240,38 +240,29 @@ p {
 .hero-content::after {
   content: '';
   position: absolute;
-  width: 120px;
-  height: 120px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q20 30 30 60 T50 90 Q60 70 60 50 T50 10' fill='%23d5e5d0' opacity='0.3'/%3E%3Cpath d='M50 15 Q28 32 35 58 T50 85 Q58 68 58 50 T50 15' fill='%23e8f3e0' opacity='0.4'/%3E%3C/svg%3E");
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  animation: leafFloat 6s ease-in-out infinite;
-  opacity: 0.6;
+  opacity: 0.35;
 }
 
-@keyframes leafFloat {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    opacity: 0.7;
-    transform: translate(-5px, -8px) rotate(5deg);
-  }
-}
-
+/* Canto superior esquerdo - caule no canto */
 .hero-content::before {
-  top: -30px;
-  left: -40px;
-  transform: rotate(-15deg);
+  top: -40px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(180deg);
 }
 
+/* Canto inferior direito - caule no canto */
 .hero-content::after {
-  bottom: -30px;
-  right: -40px;
-  transform: rotate(165deg) scaleX(-1);
-  animation-delay: 3s;
+  bottom: -40px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  transform: rotate(0deg);
 }
 
 .hero-name,
@@ -360,23 +351,7 @@ p {
 }
 
 /* ===== DECORATIVE LEAF BRANCHES - GROWING FROM WALLS ===== */
-@keyframes leafGrowSway {
-  0%, 100% {
-    transform: translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateX(-5px) rotate(1deg);
-  }
-}
-
-@keyframes leafGrowSwayRight {
-  0%, 100% {
-    transform: translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateX(5px) rotate(-1deg);
-  }
-}
+/* Animações removidas - folhas estáticas */
 
 /* ===== SECTIONS ===== */
 .section {
@@ -393,38 +368,36 @@ p {
   background: #f9faf5;
 }
 
-/* Leaf decorations - GROWING FROM LEFT WALL */
+/* Leaf decorations - Canto superior esquerdo */
 .sobre::before {
   content: '';
   position: absolute;
-  top: 5%;
-  left: 0;
-  width: 450px;
-  height: 650px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 450 650'%3E%3Cdefs%3E%3ClinearGradient id='branch1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A'/%3E%3Cstop offset='100%25' style='stop-color:%239BB17D'/%3E%3C/linearGradient%3E%3ClinearGradient id='leaf1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8'/%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a'/%3E%3Cstop offset='100%25' style='stop-color:%2395b585'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E%3C!-- Galho principal curvado --%3E%3Cpath d='M0 320 Q 60 310 110 285 T 220 235 T 330 190 Q 360 180 390 178' stroke='url(%23branch1)' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C!-- Galhos secundários --%3E%3Cpath d='M110 285 Q 105 260 95 230 T 70 175 Q 60 155 48 135' stroke='url(%23branch1)' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M220 235 Q 225 255 232 280 T 248 330 Q 255 355 262 380' stroke='url(%23branch1)' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M330 190 Q 325 165 315 140 T 295 95 Q 288 78 278 62' stroke='url(%23branch1)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C!-- Folhas desenhadas com curvas naturais --%3E%3Cg%3E%3Cpath d='M48 135 Q 32 130 22 125 Q 18 122 18 118 Q 18 114 22 111 Q 32 106 48 101' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M48 118 L 22 118' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M70 175 Q 85 168 95 163 Q 99 161 99 157 Q 99 153 95 151 Q 85 146 70 139' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M70 157 L 95 157' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M95 230 Q 78 235 68 238 Q 64 239 64 243 Q 64 247 68 248 Q 78 251 95 256' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M95 243 L 68 243' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M248 330 Q 265 328 278 327 Q 282 327 282 331 Q 282 335 278 335 Q 265 334 248 332' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M248 331 L 278 331' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M262 380 Q 278 382 290 384 Q 294 385 294 389 Q 294 393 290 394 Q 278 396 262 398' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M262 389 L 290 389' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M232 280 Q 218 285 208 288 Q 204 289 204 293 Q 204 297 208 298 Q 218 301 232 306' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M232 293 L 208 293' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M278 62 Q 265 55 255 50 Q 251 48 251 44 Q 251 40 255 38 Q 265 33 278 26' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M278 44 L 255 44' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M295 95 Q 310 88 320 84 Q 324 83 324 79 Q 324 75 320 74 Q 310 70 295 63' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M295 79 L 320 79' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M315 140 Q 328 135 338 132 Q 342 131 342 127 Q 342 123 338 122 Q 328 119 315 114' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M315 127 L 338 127' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M155 265 Q 142 268 132 270 Q 128 271 128 275 Q 128 279 132 280 Q 142 282 155 285' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M155 275 L 132 275' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M180 250 Q 195 245 205 242 Q 209 241 209 237 Q 209 233 205 232 Q 195 229 180 224' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M180 237 L 205 237' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M62 198 Q 48 202 38 205 Q 34 206 34 210 Q 34 214 38 215 Q 48 218 62 222' fill='url(%23leaf1)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M62 210 L 38 210' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  top: -60px;
+  left: -60px;
+  width: 350px;
+  height: 350px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.65;
-  animation: leafGrowSway 12s ease-in-out infinite;
+  opacity: 0.3;
   pointer-events: none;
-  transform-origin: left center;
+  transform: rotate(180deg);
 }
 
-/* Leaf decorations - GROWING FROM RIGHT WALL */
+/* Leaf decorations - Canto inferior direito */
 .sobre::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 480px;
-  height: 700px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 700'%3E%3Cdefs%3E%3ClinearGradient id='branch2' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A'/%3E%3Cstop offset='100%25' style='stop-color:%239BB17D'/%3E%3C/linearGradient%3E%3ClinearGradient id='leaf2' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8'/%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a'/%3E%3Cstop offset='100%25' style='stop-color:%2395b585'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E%3C!-- Galho principal --%3E%3Cpath d='M480 550 Q 420 535 360 510 T 240 440 T 120 360 Q 90 340 60 315' stroke='url(%23branch2)' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C!-- Galhos secundários --%3E%3Cpath d='M360 510 Q 365 480 372 445 T 388 380 Q 395 355 405 328' stroke='url(%23branch2)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M240 440 Q 235 470 228 505 T 212 575 Q 205 605 195 638' stroke='url(%23branch2)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M120 360 Q 125 330 132 295 T 148 235 Q 155 212 165 188' stroke='url(%23branch2)' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C!-- Folhas desenhadas --%3E%3Cg%3E%3Cpath d='M405 328 Q 420 322 430 318 Q 434 317 434 313 Q 434 309 430 308 Q 420 304 405 298' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M405 313 L 430 313' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M388 380 Q 405 375 418 372 Q 422 371 422 367 Q 422 363 418 362 Q 405 359 388 354' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M388 367 L 418 367' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M372 445 Q 355 450 342 453 Q 338 454 338 458 Q 338 462 342 463 Q 355 466 372 471' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M372 458 L 342 458' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M195 638 Q 178 642 165 645 Q 161 646 161 650 Q 161 654 165 655 Q 178 658 195 662' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M195 650 L 165 650' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M212 575 Q 228 570 240 567 Q 244 566 244 562 Q 244 558 240 557 Q 228 554 212 549' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M212 562 L 240 562' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M228 505 Q 245 500 258 497 Q 262 496 262 492 Q 262 488 258 487 Q 245 484 228 479' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M228 492 L 258 492' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M165 188 Q 182 182 195 178 Q 199 177 199 173 Q 199 169 195 168 Q 182 164 165 158' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M165 173 L 195 173' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M148 235 Q 132 240 120 243 Q 116 244 116 248 Q 116 252 120 253 Q 132 256 148 261' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M148 248 L 120 248' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M132 295 Q 148 290 160 287 Q 164 286 164 282 Q 164 278 160 277 Q 148 274 132 269' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M132 282 L 160 282' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M300 475 Q 285 480 273 483 Q 269 484 269 488 Q 269 492 273 493 Q 285 496 300 501' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M300 488 L 273 488' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M180 405 Q 195 400 206 397 Q 210 396 210 392 Q 210 388 206 387 Q 195 384 180 379' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M180 392 L 206 392' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M90 340 Q 75 345 64 348 Q 60 349 60 353 Q 60 357 64 358 Q 75 361 90 366' fill='url(%23leaf2)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M90 353 L 64 353' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  bottom: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.65;
-  animation: leafGrowSwayRight 14s ease-in-out infinite;
+  opacity: 0.28;
   pointer-events: none;
-  transform-origin: right center;
+  transform: rotate(0deg);
 }
 
 /* ===== SECTION GRID ===== */

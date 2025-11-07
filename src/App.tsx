@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import lucianeImg from './assets/luciane.jpg';
 
 function App() {
   useEffect(() => {
@@ -40,10 +41,6 @@ function App() {
           </p>
           <a href="#contato" className="btn-primary">✨ Agende sua avaliação</a>
         </div>
-        <div className="scroll-indicator">
-          <span>Role suavemente</span>
-          <div className="scroll-line"></div>
-        </div>
       </section>
 
       {/* Sobre a Profissional */}
@@ -51,9 +48,7 @@ function App() {
         <div className="container">
           <div className="section-grid">
             <div className="section-image reveal">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #e8f3e0 0%, #d0dfc5 100%)' }}>
-                <span className="placeholder-text">Foto da profissional</span>
-              </div>
+              <img src={lucianeImg} alt="Luciane Gonçalves - Esteticista" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
             <div className="section-content reveal">
               <h2 className="section-title">Cuidar é minha forma de transformar.</h2>
@@ -136,9 +131,7 @@ function App() {
               </ul>
             </div>
             <div className="section-image reveal">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #f6e39f 0%, #e8d885 100%)' }}>
-                <span className="placeholder-text">Foto dos resultados</span>
-              </div>
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
           </div>
         </div>
@@ -170,9 +163,7 @@ function App() {
         <div className="container">
           <div className="section-grid">
             <div className="section-image reveal">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #d5e5d0 0%, #c1d8b7 100%)' }}>
-                <span className="placeholder-text">Spa Facial</span>
-              </div>
+              <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=800&q=80" alt="Limpeza de Pele e Spa Facial" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
             <div className="section-content reveal">
               <h2 className="section-title">Spa Facial Detox ✨</h2>
@@ -197,24 +188,13 @@ function App() {
 
           <div className="gallery reveal">
             <div className="gallery-item">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #f6e39f 0%, #e8d885 100%)' }}>
-                <span className="placeholder-text">Antes/Depois 1</span>
-              </div>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpjX65oPhgb8cErP_ztNvzY_9dCVdiN-U9Rg&s" alt="Antes e Depois - Tratamento Corporal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
             <div className="gallery-item">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #e8f3e0 0%, #d0dfc5 100%)' }}>
-                <span className="placeholder-text">Antes/Depois 2</span>
-              </div>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQno2lAgWt_Kp9na8qdUAxKF_0pGT2_jglw&s" alt="Antes e Depois - Drenagem Linfática" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
             <div className="gallery-item">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #d5e5d0 0%, #c1d8b7 100%)' }}>
-                <span className="placeholder-text">Antes/Depois 3</span>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <div className="image-placeholder" style={{ background: 'linear-gradient(135deg, #c9ddc2 0%, #b5cfad 100%)' }}>
-                <span className="placeholder-text">Antes/Depois 4</span>
-              </div>
+              <img src="https://antoniassiclinic.com.br/wp-content/uploads/2024/12/134.webp" alt="Antes e Depois - Esculpe Detox" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
           </div>
         </div>

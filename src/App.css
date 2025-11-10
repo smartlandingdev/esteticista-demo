@@ -1256,13 +1256,171 @@ p {
 /* ===== REVEAL ANIMATIONS ===== */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Animações diferenciadas por tipo de elemento */
+.section-grid .reveal:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.section-grid .reveal:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.tratamentos-grid .reveal:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.tratamentos-grid .reveal:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.gallery .gallery-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.gallery .gallery-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.gallery .gallery-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+/* Animação suave para listas */
+.beneficios-list li,
+.tratamento-list li,
+.beneficios-box-list li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.beneficios-list li:nth-child(1) { transition-delay: 0.1s; }
+.beneficios-list li:nth-child(2) { transition-delay: 0.15s; }
+.beneficios-list li:nth-child(3) { transition-delay: 0.2s; }
+.beneficios-list li:nth-child(4) { transition-delay: 0.25s; }
+.beneficios-list li:nth-child(5) { transition-delay: 0.3s; }
+.beneficios-list li:nth-child(6) { transition-delay: 0.35s; }
+
+.tratamento-list li:nth-child(1) { transition-delay: 0.1s; }
+.tratamento-list li:nth-child(2) { transition-delay: 0.15s; }
+.tratamento-list li:nth-child(3) { transition-delay: 0.2s; }
+.tratamento-list li:nth-child(4) { transition-delay: 0.25s; }
+.tratamento-list li:nth-child(5) { transition-delay: 0.3s; }
+.tratamento-list li:nth-child(6) { transition-delay: 0.35s; }
+.tratamento-list li:nth-child(7) { transition-delay: 0.4s; }
+
+.beneficios-box-list li:nth-child(1) { transition-delay: 0.1s; }
+.beneficios-box-list li:nth-child(2) { transition-delay: 0.15s; }
+.beneficios-box-list li:nth-child(3) { transition-delay: 0.2s; }
+.beneficios-box-list li:nth-child(4) { transition-delay: 0.25s; }
+
+/* Quando o elemento pai fica visível, os itens aparecem */
+.reveal.visible .beneficios-list li,
+.reveal.visible .tratamento-list li,
+.reveal.visible .beneficios-box-list li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal.visible .gallery-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação suave para títulos */
+.section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação para imagens */
+.reveal .section-image img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.15s;
+}
+
+.reveal.visible .section-image img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Garantir que imagens sem reveal apareçam */
+.section-image:not(.reveal) img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animação para cards de tratamento */
+.tratamento-category {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.tratamento-category.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Animação para benefícios box */
+.beneficios-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+
+.reveal.visible .beneficios-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação para spa facial */
+.spa-facial-header {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.spa-facial-image {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+
+.spa-benefit-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.spa-benefit-item:nth-child(1) { transition-delay: 0.3s; }
+.spa-benefit-item:nth-child(2) { transition-delay: 0.4s; }
+
+.reveal.visible .spa-facial-header,
+.reveal.visible .spa-facial-image,
+.reveal.visible .spa-benefit-item {
+  opacity: 1;
+  transform: translateY(0) scale(1) translateX(0);
 }
 
 /* ===== RESPONSIVE ===== */

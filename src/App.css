@@ -519,17 +519,16 @@ p {
 .tratamentos::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 420px;
-  height: 600px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 600'%3E%3Cdefs%3E%3ClinearGradient id='branch3' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A'/%3E%3Cstop offset='100%25' style='stop-color:%239BB17D'/%3E%3C/linearGradient%3E%3ClinearGradient id='leaf3' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8'/%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a'/%3E%3Cstop offset='100%25' style='stop-color:%2395b585'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E%3Cpath d='M420 280 Q 360 260 300 230 T 180 155 T 60 70 Q 40 55 20 38' stroke='url(%23branch3)' stroke-width='3.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M300 230 Q 305 200 312 165 T 328 100 Q 335 75 345 48' stroke='url(%23branch3)' stroke-width='2.3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M180 155 Q 175 185 168 220 T 152 290 Q 145 320 135 352' stroke='url(%23branch3)' stroke-width='2.3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M60 70 Q 65 50 72 28 T 88 -5' stroke='url(%23branch3)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cg%3E%3Cpath d='M345 48 Q 360 42 372 38 Q 376 37 376 33 Q 376 29 372 28 Q 360 24 345 18' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M345 33 L 372 33' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M328 100 Q 345 95 358 92 Q 362 91 362 87 Q 362 83 358 82 Q 345 79 328 74' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M328 87 L 358 87' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M312 165 Q 295 170 282 173 Q 278 174 278 178 Q 278 182 282 183 Q 295 186 312 191' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M312 178 L 282 178' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M135 352 Q 118 356 105 359 Q 101 360 101 364 Q 101 368 105 369 Q 118 372 135 376' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M135 364 L 105 364' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M152 290 Q 168 285 180 282 Q 184 281 184 277 Q 184 273 180 272 Q 168 269 152 264' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M152 277 L 180 277' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M168 220 Q 185 215 198 212 Q 202 211 202 207 Q 202 203 198 202 Q 185 199 168 194' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M168 207 L 198 207' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M88 -5 Q 105 -10 118 -13 Q 122 -14 122 -18 Q 122 -22 118 -23 Q 105 -26 88 -31' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M88 -18 L 118 -18' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M72 28 Q 55 32 42 35 Q 38 36 38 40 Q 38 44 42 45 Q 55 48 72 52' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M72 40 L 42 40' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M240 195 Q 255 190 266 187 Q 270 186 270 182 Q 270 178 266 177 Q 255 174 240 169' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M240 182 L 266 182' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M120 118 Q 135 113 146 110 Q 150 109 150 105 Q 150 101 146 100 Q 135 97 120 92' fill='url(%23leaf3)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M120 105 L 146 105' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.65;
-  animation: leafGrowSwayRight 11s ease-in-out infinite;
+  opacity: 0.3;
   pointer-events: none;
-  transform-origin: right top;
+  transform: rotate(90deg);
 }
 
 .tratamentos-grid {
@@ -596,17 +595,16 @@ p {
 .beneficios::before {
   content: '';
   position: absolute;
-  top: 10%;
-  left: 0;
-  width: 440px;
-  height: 620px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 620'%3E%3Cdefs%3E%3ClinearGradient id='branch4' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A'/%3E%3Cstop offset='100%25' style='stop-color:%239BB17D'/%3E%3C/linearGradient%3E%3ClinearGradient id='leaf4' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8'/%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a'/%3E%3Cstop offset='100%25' style='stop-color:%2395b585'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E%3Cpath d='M0 310 Q 50 300 105 280 T 215 235 T 330 175 Q 360 155 388 132' stroke='url(%23branch4)' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M105 280 Q 100 250 92 215 T 75 150 Q 68 122 58 92' stroke='url(%23branch4)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M215 235 Q 220 265 228 300 T 245 370 Q 252 400 262 432' stroke='url(%23branch4)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M330 175 Q 335 145 342 110 T 358 45 Q 365 22 375 -2' stroke='url(%23branch4)' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cg%3E%3Cpath d='M58 92 Q 42 88 30 85 Q 26 84 26 80 Q 26 76 30 75 Q 42 72 58 68' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M58 80 L 30 80' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M75 150 Q 90 145 102 142 Q 106 141 106 137 Q 106 133 102 132 Q 90 129 75 124' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M75 137 L 102 137' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M92 215 Q 75 220 62 223 Q 58 224 58 228 Q 58 232 62 233 Q 75 236 92 241' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M92 228 L 62 228' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M262 432 Q 278 436 292 439 Q 296 440 296 444 Q 296 448 292 449 Q 278 452 262 456' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M262 444 L 292 444' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M245 370 Q 260 365 272 362 Q 276 361 276 357 Q 276 353 272 352 Q 260 349 245 344' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M245 357 L 272 357' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M228 300 Q 245 295 258 292 Q 262 291 262 287 Q 262 283 258 282 Q 245 279 228 274' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M228 287 L 258 287' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M375 -2 Q 392 -6 405 -9 Q 409 -10 409 -14 Q 409 -18 405 -19 Q 392 -22 375 -26' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M375 -14 L 405 -14' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M358 45 Q 375 40 388 37 Q 392 36 392 32 Q 392 28 388 27 Q 375 24 358 19' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M358 32 L 388 32' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M342 110 Q 325 115 312 118 Q 308 119 308 123 Q 308 127 312 128 Q 325 131 342 136' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M342 123 L 312 123' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M162 258 Q 148 262 136 265 Q 132 266 132 270 Q 132 274 136 275 Q 148 278 162 282' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M162 270 L 136 270' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M275 207 Q 290 202 302 199 Q 306 198 306 194 Q 306 190 302 189 Q 290 186 275 181' fill='url(%23leaf4)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M275 194 L 302 194' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  top: -60px;
+  left: -60px;
+  width: 300px;
+  height: 300px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.65;
-  animation: leafGrowSway 13s ease-in-out infinite;
+  opacity: 0.3;
   pointer-events: none;
-  transform-origin: left center;
+  transform: rotate(180deg);
 }
 
 .beneficios-list {
@@ -637,17 +635,16 @@ p {
 .lipedema::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 410px;
-  height: 580px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 410 580'%3E%3Cdefs%3E%3ClinearGradient id='branch5' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A'/%3E%3Cstop offset='100%25' style='stop-color:%239BB17D'/%3E%3C/linearGradient%3E%3ClinearGradient id='leaf5' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8'/%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a'/%3E%3Cstop offset='100%25' style='stop-color:%2395b585'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E%3Cpath d='M410 450 Q 350 435 290 410 T 170 335 T 50 245 Q 30 222 12 195' stroke='url(%23branch5)' stroke-width='3.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M290 410 Q 295 380 302 345 T 318 280 Q 325 252 335 222' stroke='url(%23branch5)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M170 335 Q 165 365 158 400 T 142 470 Q 135 502 125 536' stroke='url(%23branch5)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 245 Q 55 215 62 180 T 78 115 Q 85 88 95 58' stroke='url(%23branch5)' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cg%3E%3Cpath d='M335 222 Q 350 216 362 212 Q 366 211 366 207 Q 366 203 362 202 Q 350 198 335 192' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M335 207 L 362 207' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M318 280 Q 335 275 348 272 Q 352 271 352 267 Q 352 263 348 262 Q 335 259 318 254' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M318 267 L 348 267' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M302 345 Q 285 350 272 353 Q 268 354 268 358 Q 268 362 272 363 Q 285 366 302 371' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M302 358 L 272 358' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M125 536 Q 108 540 95 543 Q 91 544 91 548 Q 91 552 95 553 Q 108 556 125 560' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.9'/%3E%3Cpath d='M125 548 L 95 548' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M142 470 Q 158 465 170 462 Q 174 461 174 457 Q 174 453 170 452 Q 158 449 142 444' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M142 457 L 170 457' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M158 400 Q 175 395 188 392 Q 192 391 192 387 Q 192 383 188 382 Q 175 379 158 374' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M158 387 L 188 387' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M95 58 Q 112 53 125 50 Q 129 49 129 45 Q 129 41 125 40 Q 112 37 95 32' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M95 45 L 125 45' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M78 115 Q 62 120 48 123 Q 44 124 44 128 Q 44 132 48 133 Q 62 136 78 141' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M78 128 L 48 128' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M62 180 Q 78 175 90 172 Q 94 171 94 167 Q 94 163 90 162 Q 78 159 62 154' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M62 167 L 90 167' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M230 372 Q 215 377 203 380 Q 199 381 199 385 Q 199 389 203 390 Q 215 393 230 398' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.8'/%3E%3Cpath d='M230 385 L 203 385' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M110 285 Q 125 280 136 277 Q 140 276 140 272 Q 140 268 136 267 Q 125 264 110 259' fill='url(%23leaf5)' stroke='%2395b585' stroke-width='0.5' opacity='0.85'/%3E%3Cpath d='M110 272 L 136 272' stroke='%2395b585' stroke-width='0.4' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  bottom: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.65;
-  animation: leafGrowSwayRight 12s ease-in-out infinite;
+  opacity: 0.3;
   pointer-events: none;
-  transform-origin: right bottom;
+  transform: rotate(0deg);
 }
 
 .beneficios-box {
@@ -702,17 +699,16 @@ p {
 .resultados::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: 550px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 550'%3E%3Cdefs%3E%3ClinearGradient id='branch6' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%239BB17D;stop-opacity:1' /%3E%3C/linearGradient%3E%3ClinearGradient id='leaf6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8;stop-opacity:0.9' /%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a;stop-opacity:0.85' /%3E%3Cstop offset='100%25' style='stop-color:%2395b585;stop-opacity:0.8' /%3E%3C/linearGradient%3E%3CradialGradient id='leafShade6'%3E%3Cstop offset='0%25' style='stop-color:%23ffffff;stop-opacity:0.3' /%3E%3Cstop offset='100%25' style='stop-color:%23000000;stop-opacity:0.1' /%3E%3C/radialGradient%3E%3C/defs%3E%3Cg%3E%3Cpath d='M0 270 C42 262 85 250 128 233 C170 216 212 194 254 167 C290 143 325 115 358 82' stroke='url(%23branch6)' stroke-width='3.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M128 233 C125 205 121 177 115 149 C110 124 103 99 95 74 C88 52 80 30 70 8' stroke='url(%23branch6)' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M254 167 C259 193 264 219 269 246 C274 273 279 300 284 327 C289 352 294 378 299 404' stroke='url(%23branch6)' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M358 82 C363 62 368 42 373 22 C376 10 379 0 380 0' stroke='url(%23branch6)' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='70' cy='8' rx='24' ry='12' fill='url(%23leaf6)' transform='rotate(29 70 8)'/%3E%3Cellipse cx='70' cy='8' rx='22' ry='10' fill='url(%23leafShade6)' transform='rotate(29 70 8)'/%3E%3Cellipse cx='95' cy='74' rx='26' ry='14' fill='url(%23leaf6)' transform='rotate(-31 95 74)'/%3E%3Cellipse cx='95' cy='74' rx='24' ry='12' fill='url(%23leafShade6)' transform='rotate(-31 95 74)'/%3E%3Cellipse cx='115' cy='149' rx='25' ry='13' fill='url(%23leaf6)' transform='rotate(28 115 149)'/%3E%3Cellipse cx='115' cy='149' rx='23' ry='11' fill='url(%23leafShade6)' transform='rotate(28 115 149)'/%3E%3Cellipse cx='299' cy='404' rx='27' ry='15' fill='url(%23leaf6)' transform='rotate(-30 299 404)'/%3E%3Cellipse cx='299' cy='404' rx='25' ry='13' fill='url(%23leafShade6)' transform='rotate(-30 299 404)'/%3E%3Cellipse cx='284' cy='327' rx='26' ry='14' fill='url(%23leaf6)' transform='rotate(29 284 327)'/%3E%3Cellipse cx='284' cy='327' rx='24' ry='12' fill='url(%23leafShade6)' transform='rotate(29 284 327)'/%3E%3Cellipse cx='269' cy='246' rx='25' ry='13' fill='url(%23leaf6)' transform='rotate(-32 269 246)'/%3E%3Cellipse cx='269' cy='246' rx='23' ry='11' fill='url(%23leafShade6)' transform='rotate(-32 269 246)'/%3E%3Cellipse cx='380' cy='0' rx='24' ry='12' fill='url(%23leaf6)' transform='rotate(27 380 0)'/%3E%3Cellipse cx='380' cy='0' rx='22' ry='10' fill='url(%23leafShade6)' transform='rotate(27 380 0)'/%3E%3Cellipse cx='373' cy='22' rx='25' ry='13' fill='url(%23leaf6)' transform='rotate(-28 373 22)'/%3E%3Cellipse cx='373' cy='22' rx='23' ry='11' fill='url(%23leafShade6)' transform='rotate(-28 373 22)'/%3E%3Cellipse cx='190' cy='200' rx='23' ry='12' fill='url(%23leaf6)' transform='rotate(30 190 200)'/%3E%3Cellipse cx='220' cy='210' rx='22' ry='11' fill='url(%23leaf6)' transform='rotate(-29 220 210)'/%3E%3C/g%3E%3C/svg%3E");
+  top: -60px;
+  left: -60px;
+  width: 350px;
+  height: 350px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.59;
-  animation: leafGrowSway 11s ease-in-out infinite;
+  opacity: 0.3;
   pointer-events: none;
-  transform-origin: left top;
+  transform: rotate(180deg);
 }
 
 .gallery {
@@ -748,17 +744,16 @@ p {
 .cta::before {
   content: '';
   position: absolute;
-  top: 15%;
-  right: 0;
-  width: 430px;
-  height: 590px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 430 590'%3E%3Cdefs%3E%3ClinearGradient id='branch7' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23758C5A;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%239BB17D;stop-opacity:1' /%3E%3C/linearGradient%3E%3ClinearGradient id='leaf7' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8d4a8;stop-opacity:0.9' /%3E%3Cstop offset='50%25' style='stop-color:%23a8c69a;stop-opacity:0.85' /%3E%3Cstop offset='100%25' style='stop-color:%2395b585;stop-opacity:0.8' /%3E%3C/linearGradient%3E%3CradialGradient id='leafShade7'%3E%3Cstop offset='0%25' style='stop-color:%23ffffff;stop-opacity:0.3' /%3E%3Cstop offset='100%25' style='stop-color:%23000000;stop-opacity:0.1' /%3E%3C/radialGradient%3E%3C/defs%3E%3Cg%3E%3Cpath d='M430 295 C388 285 346 270 304 248 C262 226 220 198 178 165 C142 135 106 100 70 60 C45 35 25 10 12 0' stroke='url(%23branch7)' stroke-width='4.1' fill='none' stroke-linecap='round'/%3E%3Cpath d='M304 248 C309 220 314 192 319 163 C324 137 329 111 334 85 C339 62 344 38 349 15' stroke='url(%23branch7)' stroke-width='2.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M178 165 C173 194 168 223 163 253 C158 283 153 313 148 343 C143 371 138 400 133 429' stroke='url(%23branch7)' stroke-width='2.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M70 60 C75 40 80 20 85 0' stroke='url(%23branch7)' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='349' cy='15' rx='25' ry='13' fill='url(%23leaf7)' transform='rotate(30 349 15)'/%3E%3Cellipse cx='349' cy='15' rx='23' ry='11' fill='url(%23leafShade7)' transform='rotate(30 349 15)'/%3E%3Cellipse cx='334' cy='85' rx='26' ry='14' fill='url(%23leaf7)' transform='rotate(-29 334 85)'/%3E%3Cellipse cx='334' cy='85' rx='24' ry='12' fill='url(%23leafShade7)' transform='rotate(-29 334 85)'/%3E%3Cellipse cx='319' cy='163' rx='25' ry='13' fill='url(%23leaf7)' transform='rotate(31 319 163)'/%3E%3Cellipse cx='319' cy='163' rx='23' ry='11' fill='url(%23leafShade7)' transform='rotate(31 319 163)'/%3E%3Cellipse cx='133' cy='429' rx='27' ry='15' fill='url(%23leaf7)' transform='rotate(-32 133 429)'/%3E%3Cellipse cx='133' cy='429' rx='25' ry='13' fill='url(%23leafShade7)' transform='rotate(-32 133 429)'/%3E%3Cellipse cx='148' cy='343' rx='26' ry='14' fill='url(%23leaf7)' transform='rotate(28 148 343)'/%3E%3Cellipse cx='148' cy='343' rx='24' ry='12' fill='url(%23leafShade7)' transform='rotate(28 148 343)'/%3E%3Cellipse cx='163' cy='253' rx='25' ry='13' fill='url(%23leaf7)' transform='rotate(-30 163 253)'/%3E%3Cellipse cx='163' cy='253' rx='23' ry='11' fill='url(%23leafShade7)' transform='rotate(-30 163 253)'/%3E%3Cellipse cx='85' cy='0' rx='24' ry='12' fill='url(%23leaf7)' transform='rotate(29 85 0)'/%3E%3Cellipse cx='85' cy='0' rx='22' ry='10' fill='url(%23leafShade7)' transform='rotate(29 85 0)'/%3E%3Cellipse cx='240' cy='205' rx='24' ry='12' fill='url(%23leaf7)' transform='rotate(-28 240 205)'/%3E%3Cellipse cx='210' cy='185' rx='23' ry='11' fill='url(%23leaf7)' transform='rotate(32 210 185)'/%3E%3C/g%3E%3C/svg%3E");
+  bottom: -40px;
+  right: -50px;
+  width: 320px;
+  height: 320px;
+  background-image: url('./assets/folha.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.57;
-  animation: leafGrowSwayRight 13s ease-in-out infinite;
+  opacity: 0.35;
   pointer-events: none;
-  transform-origin: right center;
+  transform: rotate(0deg);
 }
 
 /* ===== FOOTER ===== */

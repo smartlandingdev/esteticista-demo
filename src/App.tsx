@@ -122,12 +122,12 @@ function App() {
               <p className="intro-text">Cada toque ativa o corpo de dentro pra fora — promovendo equilíbrio, leveza e bem-estar visível desde a primeira sessão.</p>
 
               <ul className="beneficios-list">
-                <li><span className="icon">🌿</span> Redução de medidas e celulite</li>
-                <li><span className="icon">🌿</span> Melhora da circulação e do trato intestinal</li>
-                <li><span className="icon">🌿</span> Aumento da firmeza e elasticidade da pele</li>
-                <li><span className="icon">🌿</span> Alívio do inchaço e sensação de leveza</li>
-                <li><span className="icon">🌿</span> Relaxamento físico e mental</li>
-                <li><span className="icon">🌿</span> Bem-estar e autoestima renovada</li>
+                <li>🌿 Redução de medidas e celulite</li>
+                <li>🌿 Melhora da circulação e do trato intestinal</li>
+                <li>🌿 Aumento da firmeza e elasticidade da pele</li>
+                <li>🌿 Alívio do inchaço e sensação de leveza</li>
+                <li>🌿 Relaxamento físico e mental</li>
+                <li>🌿 Bem-estar e autoestima renovada</li>
               </ul>
             </div>
             <div className="section-image reveal">

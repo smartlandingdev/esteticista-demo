@@ -147,6 +147,9 @@ p {
   border-radius: 50%;
   top: 20%;
   right: 15%;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: floatingDotsAppear 1.5s ease-out 0.8s forwards;
   box-shadow:
     -80px 60px 0 rgba(245, 222, 129, 0.4),
     120px -40px 0 rgba(133, 154, 95, 0.5),
@@ -156,6 +159,17 @@ p {
     250px -60px 0 4px rgba(133, 154, 95, 0.3);
   pointer-events: none;
   z-index: 1;
+}
+
+@keyframes floatingDotsAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .hero-content {
@@ -442,6 +456,10 @@ p {
   right: -150px;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  transform: translate(100px, -50px) scale(0.7);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .section::after {
@@ -455,6 +473,18 @@ p {
   left: -200px;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  transform: translate(-100px, 50px) scale(0.7);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0.2s;
+}
+
+/* Quando a seção fica visível, os elementos decorativos aparecem */
+.section.visible::before,
+.section.visible::after {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
 
 .section:nth-child(even) {
@@ -515,7 +545,10 @@ p {
   right: 10%;
   pointer-events: none;
   z-index: -1;
-  transform: rotate(45deg);
+  opacity: 0;
+  transform: rotate(45deg) translate(40px, -40px) scale(0.5);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s,
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 }
 
 .section-content::after {
@@ -528,8 +561,27 @@ p {
   left: 15%;
   pointer-events: none;
   z-index: -1;
-  transform: rotate(30deg);
   border-radius: 12px;
+  opacity: 0;
+  transform: rotate(30deg) translate(-40px, 40px) scale(0.5);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s,
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+}
+
+.reveal.visible .section-content::before,
+.reveal-left.visible .section-content::before,
+.reveal-right.visible .section-content::before,
+.reveal-scale.visible .section-content::before {
+  opacity: 1;
+  transform: rotate(45deg) translate(0, 0) scale(1);
+}
+
+.reveal.visible .section-content::after,
+.reveal-left.visible .section-content::after,
+.reveal-right.visible .section-content::after,
+.reveal-scale.visible .section-content::after {
+  opacity: 1;
+  transform: rotate(30deg) translate(0, 0) scale(1);
 }
 
 /* Leaf decorations removed for cleaner design */
@@ -751,6 +803,15 @@ p {
   pointer-events: none;
   z-index: 1;
   box-shadow: 0 0 30px rgba(245, 222, 129, 0.15);
+  opacity: 0;
+  transform: translate(-80px, -80px) scale(0.6);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tratamentos.visible::after {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
 
 /* Vinheta verde claro que aparece suavemente */
@@ -1585,6 +1646,15 @@ p {
   box-shadow:
     -200px 100px 0 rgba(133, 154, 95, 0.3),
     150px -80px 0 rgba(245, 222, 129, 0.3);
+  opacity: 0;
+  transform: rotate(25deg) translateY(-50px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.resultados.visible::after {
+  opacity: 1;
+  transform: rotate(25deg) translateY(0);
 }
 
 .resultados .container {
@@ -1733,6 +1803,15 @@ p {
     inset 0 0 0 15px rgba(245, 222, 129, 0.15),
     inset 0 0 0 30px transparent,
     inset 0 0 0 32px rgba(133, 154, 95, 0.2);
+  opacity: 0;
+  transform: translate(-60px, -60px) scale(0.5) rotate(-45deg);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cta.visible::after {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotate(0deg);
 }
 
 .cta .section-title,
@@ -1981,11 +2060,12 @@ p {
 }
 
 /* ===== REVEAL ANIMATIONS ===== */
+/* ===== ANIMAÇÕES DE REVEAL APRIMORADAS ===== */
 .reveal {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal.visible {
@@ -1993,13 +2073,106 @@ p {
   transform: translateY(0);
 }
 
-/* Animações diferenciadas por tipo de elemento */
-.section-grid .reveal:nth-child(1) {
+/* Animação deslizar da ESQUERDA */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animação deslizar da DIREITA */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animação FADE + SCALE (zoom suave) */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== DELAYS ESCALONADOS PARA EFEITO CASCATA ===== */
+
+/* Section grid alternado */
+.section-grid .reveal-left,
+.section-grid .reveal-right {
+  transition-delay: 0.15s;
+}
+
+/* Cards de tratamento em cascata */
+.tratamento-card:nth-child(1) {
   transition-delay: 0.1s;
 }
 
-.section-grid .reveal:nth-child(2) {
+.tratamento-card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.tratamento-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.tratamento-card:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+/* Benefícios em cascata */
+.beneficios-list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.beneficios-list li:nth-child(2) {
   transition-delay: 0.2s;
+}
+
+.beneficios-list li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.beneficios-list li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.beneficios-list li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+/* Spa benefits em cascata */
+.spa-benefit-item:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.spa-benefit-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.spa-benefit-item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+.spa-benefit-item:nth-child(4) {
+  transition-delay: 0.6s;
 }
 
 .tratamento-section .reveal:nth-child(1) {
@@ -2053,13 +2226,19 @@ p {
 
 /* Quando o elemento pai fica visível, os itens aparecem */
 .reveal.visible .beneficios-list li,
+.reveal-left.visible .beneficios-list li,
+.reveal-right.visible .beneficios-list li,
+.reveal-scale.visible .beneficios-list li,
 .reveal.visible .tratamento-list li,
 .reveal.visible .beneficios-box-list li {
   opacity: 1;
   transform: translateX(0);
 }
 
-.reveal.visible .gallery-item {
+.reveal.visible .gallery-item,
+.reveal-left.visible .gallery-item,
+.reveal-right.visible .gallery-item,
+.reveal-scale.visible .gallery-item {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2071,20 +2250,29 @@ p {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.reveal.visible .section-title {
+.reveal.visible .section-title,
+.reveal-left.visible .section-title,
+.reveal-right.visible .section-title,
+.reveal-scale.visible .section-title {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Animação para imagens */
-.reveal .section-image img {
+.reveal .section-image img,
+.reveal-left .section-image img,
+.reveal-right .section-image img,
+.reveal-scale .section-image img {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   transition-delay: 0.15s;
 }
 
-.reveal.visible .section-image img {
+.reveal.visible .section-image img,
+.reveal-left.visible .section-image img,
+.reveal-right.visible .section-image img,
+.reveal-scale.visible .section-image img {
   opacity: 1;
   transform: scale(1);
 }
@@ -2124,7 +2312,10 @@ p {
   transition-delay: 0.2s;
 }
 
-.reveal.visible .beneficios-box {
+.reveal.visible .beneficios-box,
+.reveal-left.visible .beneficios-box,
+.reveal-right.visible .beneficios-box,
+.reveal-scale.visible .beneficios-box {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2153,8 +2344,17 @@ p {
 .spa-benefit-item:nth-child(2) { transition-delay: 0.4s; }
 
 .reveal.visible .spa-facial-header,
+.reveal-left.visible .spa-facial-header,
+.reveal-right.visible .spa-facial-header,
+.reveal-scale.visible .spa-facial-header,
 .reveal.visible .spa-facial-image,
-.reveal.visible .spa-benefit-item {
+.reveal-left.visible .spa-facial-image,
+.reveal-right.visible .spa-facial-image,
+.reveal-scale.visible .spa-facial-image,
+.reveal.visible .spa-benefit-item,
+.reveal-left.visible .spa-benefit-item,
+.reveal-right.visible .spa-benefit-item,
+.reveal-scale.visible .spa-benefit-item {
   opacity: 1;
   transform: translateY(0) scale(1) translateX(0);
 }

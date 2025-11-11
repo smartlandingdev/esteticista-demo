@@ -6,7 +6,8 @@
       "mcp__ide__getDiagnostics",
       "Bash(npx tsc:*)",
       "Bash(git restore:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

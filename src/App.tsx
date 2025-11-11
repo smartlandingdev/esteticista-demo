@@ -6,7 +6,7 @@ function App() {
   const corporalCarouselRef = useRef<HTMLDivElement>(null);
   const facialCarouselRef = useRef<HTMLDivElement>(null);
 
-  const scrollCarousel = (ref: React.RefObject<HTMLDivElement>, direction: 'left' | 'right') => {
+  const scrollCarousel = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
       const firstCard = ref.current.querySelector('.tratamento-card') as HTMLElement;
       if (firstCard) {
@@ -24,7 +24,7 @@ function App() {
     // Smooth reveal animations on scroll
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
+      rootMargin: '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -35,7 +35,11 @@ function App() {
       });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Observa todos os elementos com classes de animação
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+    // Observa todas as seções para animar elementos decorativos (::before e ::after)
+    document.querySelectorAll('.section').forEach(el => observer.observe(el));
 
     // Observer especial para seções com vinheta
     const tratamentosSection = document.querySelector('.tratamentos');
@@ -82,10 +86,10 @@ function App() {
       <section className="section sobre" id="sobre">
         <div className="container">
           <div className="section-grid">
-            <div className="section-image reveal">
+            <div className="section-image reveal-left">
               <img src={lucianeImg} alt="Luciane Gonçalves - Esteticista" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
-            <div className="section-content reveal">
+            <div className="section-content reveal-right">
               <h2 className="section-title">Cuidar é minha forma de transformar.</h2>
               <div className="section-text">
                 <p>Sou <strong>Luciane Gonçalves</strong>, especialista em Método Esculpe Detox e apaixonada por estética funcional — uma abordagem que busca o equilíbrio natural do corpo.</p>
@@ -323,7 +327,7 @@ function App() {
       <section className="section beneficios" id="beneficios">
         <div className="container">
           <div className="section-grid">
-            <div className="section-content reveal">
+            <div className="section-content reveal-left">
               <h2 className="section-title">Resultados que vão além da estética.</h2>
               <p className="intro-text">Cada toque ativa o corpo de dentro pra fora — promovendo equilíbrio, leveza e bem-estar visível desde a primeira sessão.</p>
 
@@ -372,7 +376,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div className="section-image reveal">
+            <div className="section-image reveal-right">
               <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
           </div>
@@ -450,7 +454,7 @@ function App() {
       {/* Spa Facial */}
       <section className="section spa-facial" id="spa-facial">
         <div className="container-narrow">
-          <div className="spa-facial-wrapper reveal">
+          <div className="spa-facial-wrapper reveal-scale">
             <div className="spa-facial-header">
               <h2 className="section-title">Spa Facial Detox</h2>
               <p className="intro-text">Um momento de pausa e renovação para a sua pele. Com a máscara de carvão ativado, o protocolo purifica, renova e devolve o brilho natural — atuando contra poluição, oleosidade e impurezas.</p>
@@ -461,14 +465,14 @@ function App() {
             </div>
 
             <div className="spa-facial-benefits">
-              <div className="spa-benefit-item">
+              <div className="spa-benefit-item reveal">
                 <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M12 6v6l4 2"/>
                 </svg>
                 <span>Pele limpa, firme e luminosa</span>
               </div>
-              <div className="spa-benefit-item">
+              <div className="spa-benefit-item reveal">
                 <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                   <polyline points="22 4 12 14.01 9 11.01"/>
@@ -483,7 +487,7 @@ function App() {
       {/* Resultados */}
       <section className="section resultados" id="resultados">
         <div className="container">
-          <div className="section-header reveal">
+          <div className="section-header reveal-scale">
             <div className="section-header-decoration">
               <svg className="header-decoration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
@@ -524,7 +528,7 @@ function App() {
       {/* Chamada Final */}
       <section className="section cta" id="contato">
         <div className="container-narrow">
-          <div className="content-center reveal">
+          <div className="content-center reveal-scale">
             <h2 className="section-title">Sua transformação começa no autocuidado.</h2>
             <p className="intro-text">Agende sua sessão e viva a experiência de um toque que vai muito além da estética. Porque quando você se cuida, tudo à sua volta se transforma.</p>
             <a href="https://wa.me/5545999149281" className="btn-primary large" target="_blank" rel="noopener noreferrer">Agendar atendimento</a>

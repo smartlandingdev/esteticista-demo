@@ -20,6 +20,21 @@ function App() {
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Observer especial para seções com vinheta
+    const tratamentosSection = document.querySelector('.tratamentos');
+    const lipedemaSection = document.querySelector('.lipedema');
+    const resultadosSection = document.querySelector('.resultados');
+
+    if (tratamentosSection) {
+      observer.observe(tratamentosSection);
+    }
+    if (lipedemaSection) {
+      observer.observe(lipedemaSection);
+    }
+    if (resultadosSection) {
+      observer.observe(resultadosSection);
+    }
+
     return () => observer.disconnect();
   }, []);
 
@@ -53,9 +68,7 @@ function App() {
             <div className="section-content reveal">
               <h2 className="section-title">Cuidar é minha forma de transformar.</h2>
               <div className="section-text">
-                <p>Sou <strong>Luciane Gonçalves</strong>, especialista em técnicas avançadas do Método Esculpe Detox e apaixonada por estética funcional — uma abordagem que vai além da beleza, buscando o equilíbrio natural do corpo.</p>
-
-                <p>Cada atendimento é único: realizo avaliações personalizadas para entender suas necessidades e oferecer tratamentos faciais e corporais que respeitam seu tempo, sua pele e seu bem-estar.</p>
+                <p>Sou <strong>Luciane Gonçalves</strong>, especialista em Método Esculpe Detox e apaixonada por estética funcional — uma abordagem que busca o equilíbrio natural do corpo.</p>
 
                 <div className="highlight-box">
                   <div className="highlight-item">

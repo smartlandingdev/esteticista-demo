@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import './App.css';
 import lucianeImg from './assets/luciane.jpg';
+import facialImg from './assets/facial.jpg';
 
 function App() {
   const corporalCarouselRef = useRef<HTMLDivElement>(null);
@@ -377,7 +378,7 @@ function App() {
               </ul>
             </div>
             <div className="section-image reveal-right">
-              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
           </div>
         </div>
@@ -460,24 +461,26 @@ function App() {
               <p className="intro-text">Um momento de pausa e renovação para a sua pele. Com a máscara de carvão ativado, o protocolo purifica, renova e devolve o brilho natural — atuando contra poluição, oleosidade e impurezas.</p>
             </div>
 
-            <div className="spa-facial-image">
-              <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=800&q=80" alt="Limpeza de Pele e Spa Facial" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
-            </div>
-
-            <div className="spa-facial-benefits">
-              <div className="spa-benefit-item reveal">
-                <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 6v6l4 2"/>
-                </svg>
-                <span>Pele limpa, firme e luminosa</span>
+            <div className="spa-facial-content">
+              <div className="spa-facial-image">
+                <img src={facialImg} alt="Spa Facial Detox" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
               </div>
-              <div className="spa-benefit-item reveal">
-                <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-                <span>Efeitos visíveis desde a primeira sessão</span>
+
+              <div className="spa-facial-benefits">
+                <div className="spa-benefit-item reveal">
+                  <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  <span>Pele limpa, firme e luminosa</span>
+                </div>
+                <div className="spa-benefit-item reveal">
+                  <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <span>Efeitos visíveis desde a primeira sessão</span>
+                </div>
               </div>
             </div>
           </div>
@@ -493,7 +496,7 @@ function App() {
                 <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
                 <path d="M9 21h6"/>
               </svg>
-              <h2 className="section-title">Antes e Depois</h2>
+              <h2 className="section-title">Resultados</h2>
               <svg className="header-decoration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
                 <path d="M9 21h6"/>
@@ -507,19 +510,25 @@ function App() {
               <div className="gallery-item-overlay">
                 <span className="gallery-label">Transformação Real</span>
               </div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpjX65oPhgb8cErP_ztNvzY_9dCVdiN-U9Rg&s" alt="Antes e Depois - Tratamento Corporal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+              <img src="/src/assets/resultados/resultado (1).JPG" alt="Antes e Depois - Resultado 1" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
+       
+    
+           
             <div className="gallery-item">
               <div className="gallery-item-overlay">
                 <span className="gallery-label">Resultados Visíveis</span>
               </div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQno2lAgWt_Kp9na8qdUAxKF_0pGT2_jglw&s" alt="Antes e Depois - Drenagem Linfática" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+              <img src="/src/assets/resultados/resultado (5).JPG" alt="Antes e Depois - Resultado 5" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
+
+           
+
             <div className="gallery-item">
               <div className="gallery-item-overlay">
-                <span className="gallery-label">Bem-estar Renovado</span>
+                <span className="gallery-label">Resultados Visíveis</span>
               </div>
-              <img src="https://antoniassiclinic.com.br/wp-content/uploads/2024/12/134.webp" alt="Antes e Depois - Esculpe Detox" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+              <img src="/src/assets/resultados/resultado.JPG" alt="Antes e Depois - Resultado 11" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
           </div>
         </div>

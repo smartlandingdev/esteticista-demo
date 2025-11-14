@@ -87,6 +87,61 @@ p {
   padding: 0 2rem;
 }
 
+/* ===== MEDIA QUERY PARA TELAS MÉDIAS (MacBook, etc) ===== */
+@media (min-width: 1024px) and (max-width: 1600px) {
+  html {
+    font-size: 14px; /* Reduz o tamanho base */
+  }
+
+  .container {
+    max-width: 1000px;
+    padding: 0 1.5rem;
+  }
+
+  .container-narrow {
+    max-width: 750px;
+    padding: 0 1.5rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 2.8vw, 2rem);
+  }
+
+  p {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem) !important;
+  }
+
+  .tratamento-card {
+    max-width: 280px;
+  }
+
+  .btn-primary {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary.large {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;

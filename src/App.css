@@ -98,6 +98,106 @@ p {
   overflow: hidden;
 }
 
+/* Menu de navegação no topo do Hero */
+.hero-nav {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.8rem, 2vw, 1.5rem);
+  padding: 0 clamp(2rem, 4vw, 4rem);
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 10px 40px rgba(133, 154, 95, 0.2),
+    0 5px 20px rgba(0, 0, 0, 0.1),
+    inset 0 2px 0 rgba(255, 255, 255, 1);
+  z-index: 10;
+  animation: stretchFromCircle 1.2s cubic-bezier(0.4, 0, 0.2, 1) 2s forwards;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateX(-50%) translateZ(0) scale(0.1);
+  transform-origin: center;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.hero-nav-link {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #5a6e42;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  opacity: 0;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  transform: translateX(-5px) translateZ(0);
+  animation: fadeInNavLink 0.4s ease-out 3s forwards;
+}
+
+.hero-nav-link:hover {
+  color: #859a5f;
+  transform: translateY(-2px) translateZ(0);
+}
+
+.hero-nav-separator {
+  color: rgba(90, 110, 66, 0.3);
+  font-size: 0.7rem;
+  font-weight: 300;
+  opacity: 0;
+  will-change: opacity;
+  backface-visibility: hidden;
+  animation: fadeInNavSeparator 0.3s ease-out 3.1s forwards;
+}
+
+@keyframes stretchFromCircle {
+  0% {
+    transform: translateX(-50%) translateZ(0) scale(0.1);
+    border-radius: 50%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateZ(0) scale(1);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleX(1) scaleY(1);
+    border-radius: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInNavLink {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+@keyframes fadeInNavSeparator {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Imagem de fundo com opacidade baixa */
 .hero-bg-image {
   position: absolute;
@@ -113,7 +213,8 @@ p {
   filter: grayscale(0.3) sepia(0.2);
 }
 
-.hero::before {
+/* Gradiente flutuante de fundo movido para ::after do hero-bg-image */
+.hero-bg-image::after {
   content: '';
   position: absolute;
   top: 0;
@@ -2942,6 +3043,33 @@ p {
   width: 100%;
 }
 
+.footer-credit a {
+  color: #d9e7c8;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-credit a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #d9e7c8;
+  transition: width 0.3s ease;
+}
+
+.footer-credit a:hover {
+  color: #e8f0d8;
+}
+
+.footer-credit a:hover::after {
+  width: 100%;
+}
+
 .footer-credit span {
   color: #d9e7c8;
   font-weight: 400;
@@ -3297,6 +3425,11 @@ p {
     padding: 0 1.5rem;
   }
 
+  /* Esconder menu de navegação no mobile */
+  .hero-nav {
+    display: none;
+  }
+
   .hero-content {
     padding: 3rem 2rem;
     background: linear-gradient(
@@ -3323,6 +3456,45 @@ p {
 
   .gallery {
     grid-template-columns: 1fr;
+  }
+
+  /* Melhorias na seção de Tratamentos para mobile */
+  .tratamentos .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .tratamentos .section-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .tratamentos .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+
+  .tratamento-section {
+    margin-top: 2.5rem;
+  }
+
+  .tratamento-section:first-of-type {
+    margin-top: 2rem;
+  }
+
+  .tratamento-title-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .tratamento-section-title {
+    font-size: 1.1rem;
+  }
+
+  .tratamento-title-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 

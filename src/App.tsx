@@ -9,6 +9,9 @@ import drenagemLinfaticaImg from './assets/servicos/drenagem linfatica.jpg';
 import massagemEsculpeWeek from './assets/servicos/esculpe week.jpg';
 import spaImg from './assets/servicos/spa.jpg';
 import posImg from './assets/servicos/pos.jpg';
+import resultado1Img from './assets/resultados/resultado (1).JPG';
+import resultado5Img from './assets/resultados/resultado (5).JPG';
+import resultadoImg from './assets/resultados/resultado.JPG';
 
 function App() {
   const corporalCarouselRef = useRef<HTMLDivElement>(null);
@@ -74,6 +77,21 @@ function App() {
     <div className="app">
       {/* Hero Section */}
       <section className="hero" id="hero">
+        {/* Menu de navegação no topo */}
+        <nav className="hero-nav">
+          <a href="#sobre" className="hero-nav-link">SOBRE</a>
+          <span className="hero-nav-separator">|</span>
+          <a href="#tratamentos" className="hero-nav-link">TRATAMENTOS</a>
+          <span className="hero-nav-separator">|</span>
+          <a href="#beneficios" className="hero-nav-link">BENEFÍCIOS</a>
+          <span className="hero-nav-separator">|</span>
+          <a href="#spa-facial" className="hero-nav-link">FACIAL</a>
+          <span className="hero-nav-separator">|</span>
+          <a href="#resultados" className="hero-nav-link">RESULTADOS</a>
+          <span className="hero-nav-separator">|</span>
+          <a href="#contato" className="hero-nav-link">CONTATO</a>
+        </nav>
+
         <div className="hero-bg-image"></div>
         <div className="hero-overlay"></div>
         <div className="hero-content fade-in">
@@ -439,25 +457,21 @@ function App() {
               <div className="gallery-item-overlay">
                 <span className="gallery-label">Transformação Real</span>
               </div>
-              <img src="/src/assets/resultados/resultado (1).JPG" alt="Antes e Depois - Resultado 1" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+              <img src={resultado1Img} alt="Antes e Depois - Resultado 1" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
-       
-    
-           
-            <div className="gallery-item">
-              <div className="gallery-item-overlay">
-                <span className="gallery-label">Resultados Visíveis</span>
-              </div>
-              <img src="/src/assets/resultados/resultado (5).JPG" alt="Antes e Depois - Resultado 5" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
-            </div>
-
-           
 
             <div className="gallery-item">
               <div className="gallery-item-overlay">
                 <span className="gallery-label">Resultados Visíveis</span>
               </div>
-              <img src="/src/assets/resultados/resultado.JPG" alt="Antes e Depois - Resultado 11" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+              <img src={resultado5Img} alt="Antes e Depois - Resultado 5" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
+            </div>
+
+            <div className="gallery-item">
+              <div className="gallery-item-overlay">
+                <span className="gallery-label">Resultados Visíveis</span>
+              </div>
+              <img src={resultadoImg} alt="Antes e Depois - Resultado 11" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} />
             </div>
           </div>
         </div>
@@ -523,7 +537,7 @@ function App() {
 
             <div className="footer-bottom">
               <div className="footer-divider"></div>
-              <p className="footer-credit">Desenvolvido com cuidado por <span>Smart Landing</span></p>
+              <p className="footer-credit">Desenvolvido com cuidado por <a href="http://smartlanding.com.br/" target="_blank" rel="noopener noreferrer">Smart Landing</a></p>
             </div>
           </div>
         </div>

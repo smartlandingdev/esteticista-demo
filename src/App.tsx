@@ -1,7 +1,14 @@
 import { useEffect, useRef } from 'react';
 import './App.css';
 import lucianeImg from './assets/luciane.jpg';
-import facialImg from './assets/facial.jpg';
+import limpezaProfundaImg from './assets/servicos/limpeza facial profunda.jpg';
+import fotobiomoduladaImg from './assets/servicos/fotobiomodulada.jpg';
+import massagemFuncionalImg from './assets/servicos/massagem funcional.jpg';
+import esculpe21Img from './assets/servicos/esculpe 21.jpg';
+import drenagemLinfaticaImg from './assets/servicos/drenagem linfatica.jpg';
+import massagemEsculpeWeek from './assets/servicos/esculpe week.jpg';
+import spaImg from './assets/servicos/spa.jpg';
+import posImg from './assets/servicos/pos.jpg';
 
 function App() {
   const corporalCarouselRef = useRef<HTMLDivElement>(null);
@@ -39,19 +46,19 @@ function App() {
     // Observa todos os elementos com classes de animação
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 
-    // Observa todas as seções para animar elementos decorativos (::before e ::after)
+    // Observa todas as seções para animar elementos decorativos
     document.querySelectorAll('.section').forEach(el => observer.observe(el));
 
-    // Observer especial para seções com vinheta
+    // Observer especial para seções específicas
     const tratamentosSection = document.querySelector('.tratamentos');
-    const lipedemaSection = document.querySelector('.lipedema');
+    const spaFacialSection = document.querySelector('.spa-facial');
     const resultadosSection = document.querySelector('.resultados');
 
     if (tratamentosSection) {
       observer.observe(tratamentosSection);
     }
-    if (lipedemaSection) {
-      observer.observe(lipedemaSection);
+    if (spaFacialSection) {
+      observer.observe(spaFacialSection);
     }
     if (resultadosSection) {
       observer.observe(resultadosSection);
@@ -88,7 +95,7 @@ function App() {
         <div className="container">
           <div className="section-grid">
             <div className="section-image reveal-left">
-              <img src={lucianeImg} alt="Luciane Gonçalves - Esteticista" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
+              <img src={lucianeImg} alt="Luciane Gonçalves - Esteticista" style={{ width: '100%', maxWidth: '450px', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
             <div className="section-content reveal-right">
               <h2 className="section-title">Cuidar é minha forma de transformar.</h2>
@@ -151,73 +158,53 @@ function App() {
                 </svg>
               </button>
 
-              <div className="tratamento-cards-wrapper" ref={corporalCarouselRef}>
+              <div className="tratamento-cards-wrapper tratamento-cards-grid" ref={corporalCarouselRef}>
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" alt="Esculpe Detox 21" />
+                  <img src={massagemFuncionalImg} alt="Massagem Funcional Esculpe Detox" />
                 </div>
                 <div className="tratamento-card-content">
-                  <h4>Esculpe Detox 21</h4>
+                  <h4>Massagem Funcional Esculpe Detox</h4>
+                  <p>Resultado desde a primeira sessão.</p>
+                </div>
+              </div>
+
+              <div className="tratamento-card">
+                <div className="tratamento-card-image">
+                  <img src={massagemEsculpeWeek} alt="Esculpe Week" />
+                </div>
+                <div className="tratamento-card-content">
+                  <h4>Esculpe Week - A Massagem do Verão</h4>
+                  <p>Programa intensivo para desintoxicar e redefinir.</p>
+                </div>
+              </div>
+
+              <div className="tratamento-card">
+                <div className="tratamento-card-image">
+                  <img src={esculpe21Img} alt="Esculpe 21" style={{ objectPosition: 'center bottom' }} />
+                </div>
+                <div className="tratamento-card-content">
+                  <h4>Esculpe 21</h4>
                   <p>Ciclo de 21 dias com resultados intensos e visíveis.</p>
                 </div>
               </div>
 
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80" alt="Esculpe Detox 2.0" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Esculpe Detox 2.0</h4>
-                  <p>Manutenção e aprimoramento do contorno corporal.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80" alt="Esculpe Week" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Esculpe Week</h4>
-                  <p>Programa intensivo de 7 dias para desintoxicar e redefinir.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80" alt="Esculpe 40+ / 60+" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Esculpe 40+ / 60+</h4>
-                  <p>Foco em firmeza, circulação e vitalidade.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=400&q=80" alt="Esculpe Gestante" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Esculpe Gestante</h4>
-                  <p>Cuidado seguro e acolhedor durante a gestação.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80" alt="Esculpe Pós-Operatório" />
+                  <img src={posImg} alt="Esculpe Detox Pós-Operatório" />
                 </div>
                 <div className="tratamento-card-content">
                   <h4>Esculpe Detox Pós-Operatório</h4>
-                  <p>Suporte na recuperação e redução de edemas.</p>
+                  <p>Suporte na recuperação e redução de edemas após cirurgias.</p>
                 </div>
               </div>
 
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=400&q=80" alt="Drenagem Linfática" />
+                  <img src={drenagemLinfaticaImg} alt="Drenagem Linfática" style={{ objectPosition: 'center bottom' }} />
                 </div>
                 <div className="tratamento-card-content">
-                  <h4>Drenagem Linfática Funcional</h4>
+                  <h4>Drenagem Linfática</h4>
                   <p>Técnica suave que reduz inchaços e ativa a circulação.</p>
                 </div>
               </div>
@@ -258,54 +245,34 @@ function App() {
                 </svg>
               </button>
 
-              <div className="tratamento-cards-wrapper" ref={facialCarouselRef}>
+              <div className="tratamento-cards-wrapper tratamento-cards-grid" ref={facialCarouselRef}>
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=400&q=80" alt="Limpeza de Pele" />
+                  <img src={limpezaProfundaImg} alt="Limpeza de Pele Profunda" />
                 </div>
                 <div className="tratamento-card-content">
                   <h4>Limpeza de Pele Profunda</h4>
-                  <p>Remoção de impurezas e renovação celular.</p>
+                  <p>Remoção de impurezas e renovação celular completa.</p>
                 </div>
               </div>
 
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" alt="Spa Detox" />
+                  <img src={fotobiomoduladaImg} alt="Limpeza de Pele Fotobiomodulada" style={{ objectPosition: 'center bottom' }} />
                 </div>
                 <div className="tratamento-card-content">
-                  <h4>Spa Facial Detox</h4>
-                  <p>Máscara de carvão ativado para purificação profunda.</p>
+                  <h4>Limpeza de Pele Fotobiomodulada</h4>
+                  <p>Tecnologia de luz para potencializar a renovação celular.</p>
                 </div>
               </div>
 
               <div className="tratamento-card">
                 <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80" alt="Revitalização Facial" />
+                  <img src={spaImg} alt="Massagem Spa Facial" />
                 </div>
                 <div className="tratamento-card-content">
-                  <h4>Revitalização e Hidratação</h4>
-                  <p>Pele nutrida, luminosa e saudável.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Rejuvenescimento" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Firmeza e Rejuvenescimento</h4>
-                  <p>Tratamento para pele madura e linhas de expressão.</p>
-                </div>
-              </div>
-
-              <div className="tratamento-card">
-                <div className="tratamento-card-image">
-                  <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80" alt="Anti-Poluição" />
-                </div>
-                <div className="tratamento-card-content">
-                  <h4>Anti-Poluição e Detox</h4>
-                  <p>Proteção contra danos ambientais e radicais livres.</p>
+                  <h4>Massagem Spa Facial e Rejuvenescimento</h4>
+                  <p>Relaxamento, rejuvenescimento e estímulo do nervo vago.</p>
                 </div>
               </div>
               </div>
@@ -378,92 +345,40 @@ function App() {
               </ul>
             </div>
             <div className="section-image reveal-right">
-              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
+              <img src={massagemFuncionalImg} alt="Benefícios dos tratamentos" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Drenagem e Lipedema */}
-      <section className="section lipedema" id="lipedema">
-        <div className="container">
-          <div className="section-header reveal">
-            <h2 className="section-title">Alívio e cuidado para quem convive com lipedema.</h2>
-            <p className="section-subtitle">O lipedema é uma condição que causa acúmulo anormal de gordura, inchaço e sensibilidade — e exige atenção especial. A drenagem linfática funcional é uma aliada poderosa nesse cuidado.</p>
-          </div>
-
-          <div className="lipedema-benefits-grid reveal">
-            <div className="lipedema-benefit-card">
-              <div className="lipedema-card-image">
-                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=80" alt="Reduz inchaço" />
-              </div>
-              <div className="lipedema-card-content">
-                <svg className="lipedema-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <h4>Reduz o inchaço</h4>
-                <p>Melhora a oxigenação dos tecidos e diminui o acúmulo de líquidos.</p>
-              </div>
-            </div>
-
-            <div className="lipedema-benefit-card">
-              <div className="lipedema-card-image">
-                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&q=80" alt="Alivia dor" />
-              </div>
-              <div className="lipedema-card-content">
-                <svg className="lipedema-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <h4>Alivia a dor</h4>
-                <p>Reduz o desconforto e a sensibilidade nas áreas afetadas.</p>
-              </div>
-            </div>
-
-            <div className="lipedema-benefit-card">
-              <div className="lipedema-card-image">
-                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=80" alt="Elimina toxinas" />
-              </div>
-              <div className="lipedema-card-content">
-                <svg className="lipedema-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <h4>Elimina toxinas</h4>
-                <p>Estimula o sistema linfático a drenar e purificar o organismo.</p>
-              </div>
-            </div>
-
-            <div className="lipedema-benefit-card">
-              <div className="lipedema-card-image">
-                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80" alt="Bem-estar" />
-              </div>
-              <div className="lipedema-card-content">
-                <svg className="lipedema-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <h4>Promove leveza</h4>
-                <p>Sensação de bem-estar e conforto em todo o corpo.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="lipedema-footer reveal">
-            <p className="lipedema-highlight">Um tratamento seguro, humanizado e feito com o toque certo para o seu corpo.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Spa Facial */}
+      {/* Massagem Spa Facial */}
       <section className="section spa-facial" id="spa-facial">
         <div className="container-narrow">
           <div className="spa-facial-wrapper reveal-scale">
+            {/* Elementos decorativos extras */}
+            <div className="spa-extra-deco-1"></div>
+            <div className="spa-extra-deco-2"></div>
+            <div className="spa-extra-deco-3"></div>
+            <div className="spa-extra-deco-4"></div>
+            <div className="spa-extra-deco-5"></div>
+            <div className="spa-extra-deco-6"></div>
+            <div className="spa-extra-deco-7"></div>
+            <div className="spa-extra-deco-8"></div>
+            <div className="spa-extra-deco-9"></div>
+            <div className="spa-extra-deco-10"></div>
+            <div className="spa-extra-deco-11"></div>
+            <div className="spa-extra-deco-12"></div>
+            <div className="spa-extra-deco-13"></div>
+            <div className="spa-extra-deco-14"></div>
+
             <div className="spa-facial-header">
-              <h2 className="section-title">Spa Facial Detox</h2>
-              <p className="intro-text">Um momento de pausa e renovação para a sua pele. Com a máscara de carvão ativado, o protocolo purifica, renova e devolve o brilho natural — atuando contra poluição, oleosidade e impurezas.</p>
+              <h2 className="section-title">Massagem Spa Facial e Rejuvenescimento</h2>
+              <p className="intro-text">Rejuvenescimento facial com estímulo do nervo vago para relaxamento e bem-estar profundo.</p>
             </div>
 
             <div className="spa-facial-content">
               <div className="spa-facial-image">
-                <img src={facialImg} alt="Spa Facial Detox" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
+                <img src={spaImg} alt="Massagem Spa Facial" style={{ width: '100%', maxWidth: '500px', margin: '0 auto', display: 'block', borderRadius: '20px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)' }} />
               </div>
 
               <div className="spa-facial-benefits">
@@ -472,14 +387,14 @@ function App() {
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 6v6l4 2"/>
                   </svg>
-                  <span>Pele limpa, firme e luminosa</span>
+                  <span>Rejuvenescimento natural e relaxamento profundo</span>
                 </div>
                 <div className="spa-benefit-item reveal">
                   <svg className="spa-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                     <polyline points="22 4 12 14.01 9 11.01"/>
                   </svg>
-                  <span>Efeitos visíveis desde a primeira sessão</span>
+                  <span>Estímulo do nervo vago para bem-estar completo</span>
                 </div>
               </div>
             </div>
@@ -490,6 +405,20 @@ function App() {
       {/* Resultados */}
       <section className="section resultados" id="resultados">
         <div className="container">
+          {/* Elementos decorativos extras */}
+          <div className="results-deco-1"></div>
+          <div className="results-deco-2"></div>
+          <div className="results-deco-3"></div>
+          <div className="results-deco-4"></div>
+          <div className="results-deco-5"></div>
+          <div className="results-deco-6"></div>
+          <div className="results-deco-7"></div>
+          <div className="results-deco-8"></div>
+          <div className="results-deco-9"></div>
+          <div className="results-deco-10"></div>
+          <div className="results-deco-11"></div>
+          <div className="results-deco-12"></div>
+
           <div className="section-header reveal-scale">
             <div className="section-header-decoration">
               <svg className="header-decoration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -585,7 +514,7 @@ function App() {
               <div className="footer-col">
                 <h4 className="footer-heading">Horário de Atendimento</h4>
                 <div className="footer-links">
-                  <p className="footer-text">Segunda a Sexta</p>
+                  <p className="footer-text">Segunda a Sábado</p>
                   <p className="footer-text">09:00 - 18:00</p>
                   <p className="footer-text-small">Atendimento com hora marcada</p>
                 </div>

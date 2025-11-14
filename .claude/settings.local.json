@@ -7,7 +7,10 @@
       "Bash(npx tsc:*)",
       "Bash(git restore:*)",
       "Bash(git stash:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd TypeScript declarations for image imports\n\nFix build errors by adding vite-env.d.ts to declare module types for image files with both uppercase and lowercase extensions (.JPG, .jpg, .PNG, .png, etc.).\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

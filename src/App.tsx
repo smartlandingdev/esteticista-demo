@@ -483,7 +483,41 @@ function App() {
           <div className="content-center reveal-scale">
             <h2 className="section-title">Sua transformação começa no autocuidado.</h2>
             <p className="intro-text">Agende sua sessão e viva a experiência de um toque que vai muito além da estética. Porque quando você se cuida, tudo à sua volta se transforma.</p>
-            <a href="https://wa.me/5545999149281" className="btn-primary large" target="_blank" rel="noopener noreferrer">Agendar atendimento</a>
+            <div style={{ display: 'flex', gap: '1.2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2.5rem' }}>
+              <a href="https://wa.me/5545999149281" className="btn-primary large" target="_blank" rel="noopener noreferrer">
+                Agendar atendimento
+              </a>
+              <a
+                href="https://www.instagram.com/esteticalugoncalves"
+                className="btn-primary large"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  background: 'linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%)',
+                  border: 'none',
+                  boxShadow: '0 8px 25px rgba(131, 58, 180, 0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 12px 35px rgba(131, 58, 180, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(131, 58, 180, 0.3)';
+                }}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: '22px', height: '22px' }}>
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Conheça nosso perfil
+              </a>
+            </div>
           </div>
         </div>
       </section>
